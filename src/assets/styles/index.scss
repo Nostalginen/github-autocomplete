@@ -1,0 +1,65 @@
+@import "./variables.scss";
+@import "~normalize.css/normalize.css";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
+
+
+body {
+    background-color: $color-light-grey;
+
+    * {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+    }
+}
+
+.main__container {
+    padding: 30px;
+    max-width: 650px;
+    margin: 20vh auto 0 auto;
+}
+
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.btn {
+    padding: 8px 14px;
+    background-color: $color-blue;
+    border: 0;
+    color: #fff;
+    border-radius: 20px;
+    transition: all .2s linear;
+    cursor: pointer;
+    opacity: 0.6;
+    outline: 0;
+
+    &:hover,
+    &:focus {
+        opacity: 1;
+
+    }
+}
+
+// Custom scrollbar just for fun
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $color-grey;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: $color-dark-grey;
+}

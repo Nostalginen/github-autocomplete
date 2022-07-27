@@ -1,0 +1,22 @@
+// Almost fifty shades
+$color-very-light-grey: #EBECF2;
+$color-light-grey: #E6E6EE;
+$color-grey: #8F929D;
+$color-darker-grey: #63677C;
+$color-dark-grey: #4F5160;
+$color-red: #FF3621;
+$color-blue: #2799FF;
+
+@keyframes fadeInDown {
+    from {
+
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}

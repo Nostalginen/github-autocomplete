@@ -1,6 +1,11 @@
-function App() {
+import React from 'react';
+import Search from "./search/search"
+
+const App = () => {
   return (
-    <div className='asdf'></div>
+    <main className="main__container">
+      <Search />
+    </main>
   );
 }
 
