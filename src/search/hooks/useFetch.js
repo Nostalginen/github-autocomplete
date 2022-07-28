@@ -6,7 +6,7 @@ import axios from "axios";
 
 export const useFetch = (page = 1, search = '') => {
     const [data, setData] = useState(null);
-    const [error, setError] = useState("");
+    const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
     const [maxResults, setMax] = useState(0);
     const prevSearch = usePrevious(search);
@@ -18,6 +18,7 @@ export const useFetch = (page = 1, search = '') => {
         `https://api.github.com/search/users?${params}`,
         `https://api.github.com/search/repositories?${params}`
     ];
+
 
     useEffect(() => {
         if (search.length >= 3) {
@@ -36,13 +37,14 @@ export const useFetch = (page = 1, search = '') => {
                         })
                     );
                 } catch (error) {
+                    console.error('Oh no, an error:', error);
                     setError(error.message);
                 } finally {
                     setLoading(false);
                 }
             })();
         } else {
-            setData(null)
+            setData(null);
         }
     }, [page, search]);
 

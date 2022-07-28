@@ -39,7 +39,8 @@
 .search-results__container {
     overflow-y: scroll;
     overflow-x: hidden;
-    transition: all .3s linear;
+    transition: all .5s linear;
+    scroll-behavior: smooth;
 
     &[aria-hidden="false"] {
         border-top: 2px solid $color-very-light-grey;

@@ -4,7 +4,7 @@
     animation-name: fadeInDown;
     animation-duration: 0.4s;
     animation-fill-mode: both;
-    transition: none;
+    min-height: 40px;
 }
 
 .list-item__wrapper {
@@ -44,6 +44,7 @@
     .icon {
         margin-left: auto;
         transition: all .2s linear;
+
     }
 
     &:hover,
@@ -60,5 +61,13 @@
         .icon {
             stroke: $color-blue;
         }
+    }
+}
+
+@include breakpoint(md-down) {
+
+    .icon,
+    .index {
+        display: none;
     }
 }

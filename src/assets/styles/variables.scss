@@ -20,3 +20,47 @@ $color-blue: #2799FF;
         transform: translate3d(0, 0, 0);
     }
 }
+
+@mixin breakpoint($point) {
+    @if $point ==sm-down {
+        @media (max-width: 460px) {
+            @content;
+        }
+    }
+
+    @else if $point ==md-down {
+        @media (max-width: 800px) {
+            @content;
+        }
+    }
+
+    @else if $point ==lg-down {
+        @media (max-width: 1024px) {
+            @content;
+        }
+    }
+
+    @else if $point ==sm-up {
+        @media (min-width: 320px) {
+            @content;
+        }
+    }
+
+    @else if $point ==md-up {
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
+
+    @else if $point ==lg-up {
+        @media (min-width: 960px) {
+            @content;
+        }
+    }
+
+    @else if $point ==xlg-up {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+}
